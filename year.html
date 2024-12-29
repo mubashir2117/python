@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:700|Pacifico');
+
+        *,
+        *:after,
+        *:before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+        }
+
+        html {
+            background: #000000;
+        }
+
+        .feliz {
+            width: 100%;
+            font-family: cursive;
+            font-size: 100px;
+            font-weight: 700;
+            color: #00ff62;
+            text-align: center;
+            position: absolute;
+            top: 35%;
+            opacity: 0;
+            animation: vem_feliz 2s ease-in-out 7s forwards;
+        }
+
+        .ano_novo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 202px 100px 0px 0px;
+        }
+
+        .ano_novo>span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 175px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .seis {
+            position: absolute;
+            top: 50%;
+            right: 48%;
+            margin-right: -200px;
+            animation: fade_out_4 5s ease-in-out 3s forwards;
+        }
+
+        .sete {
+            position: absolute;
+            right: -100px;
+            top: 50%;
+            margin-right: -215px;
+            animation: slide_in_5 5s ease-in-out 5s forwards;
+        }
+
+        .balao {
+            width: 100px;
+            height: 100px;
+            display: block;
+            background: #e8d57a;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            margin-top: -165px;
+            right: 0%;
+            margin-right: -200px;
+            animation: vem_e_vai_balao 10s ease-in-out forwards;
+        }
+
+        .balao:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 10px 20px 10px;
+            border-color: transparent transparent #b19b32 transparent;
+            position: absolute;
+            left: 50%;
+            margin-left: -10px;
+            bottom: -10px;
+            z-index: -1;
+        }
+
+        .balao:after {
+            content: '';
+            width: 4px;
+            height: 100px;
+            display: block;
+            background: #fff;
+            border-radius: 0px 0px 3px 3px;
+            position: absolute;
+            left: 50%;
+            margin-left: -2px;
+            bottom: -110px;
+        }
+
+        @keyframes fade_out_4 {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+        }
+
+        @keyframes slide_in_5 {
+            0% {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes vem_e_vai_balao {
+            0% {
+                right: 0%;
+            }
+
+            40% {
+                right: 50%;
+                margin-right: -300px;
+            }
+
+            50% {
+                right: 50%;
+                margin-right: -200px;
+                top: 50%;
+            }
+
+            100% {
+                top: -100%;
+                right: 50%;
+            }
+        }
+
+        @keyframes vem_feliz {
+            0% {
+                margin-top: 0px;
+                opacity: 0;
+            }
+
+            100% {
+                margin-top: -200px;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="feliz">Mubashir <br>Happy New Year</div>
+    <div class="ano_novo">
+        <span>202</span>
+        <span class="seis">4</span>
+        <span class="sete">5</span>
+        <div class="balao"></div>
+    </div>
+    <a href="https://www.instagram.com/mj_mubashir21/" class="author">Mubashir</a>
+</body>
+
+</html>
